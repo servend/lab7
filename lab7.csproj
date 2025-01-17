@@ -67,24 +67,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="3.png" />
     <Content Include="1.png" />
     <Content Include="2.png" />
+    <Content Include="4.png" />
+    <Content Include="6.png" />
     <Content Include="11.png" />
+    <Content Include="22.png" />
+    <Content Include="33.png" />
+    <Content Include="66.png" />
     <Content Include="111.png" />
     <Content Include="222.png" />
     <Content Include="333.png" />
-    <Content Include="444.png" />
-    <Content Include="555.png" />
-    <Content Include="22.png" />
-    <Content Include="33.png" />
-    <Content Include="44.png" />
-    <Content Include="55.png" />
-    <Content Include="3.png" />
-    <Content Include="4.png" />
-    <Content Include="5.png" />
-    <Content Include="6.jpg" />
-    <Content Include="66.jpg" />
-    <Content Include="666.jpg" />
+    <Content Include="666.png" />
     <Content Include="blue.html" />
     <Content Include="graphics.html" />
     <Content Include="red.html" />

@@ -1,4 +1,5 @@
-﻿* {
+﻿/* Общие стили */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -68,9 +69,7 @@ main h2 {
     .container {
         display: grid;
         grid-template-columns: 200px 1fr;
-        grid-template-areas:
-            "header header"
-            "nav main";
+        grid-template-areas: "header header" "nav main";
         gap: 20px;
     }
 
@@ -123,3 +122,70 @@ main h2 {
             border-bottom: none;
         }
 }
+
+/* Анимация для главной страницы */
+.graphics .nav-item:not(.current) {
+    position: relative;
+    overflow: hidden;
+}
+
+    .graphics .nav-item:not(.current)::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #4a90e2;
+        transition: left 0.5s ease;
+        z-index: -1;
+    }
+
+    .graphics .nav-item:not(.current):hover::before {
+        left: 0;
+    }
+
+    .graphics .nav-item:not(.current):hover a {
+        color: white;
+        transition: color 0.5s ease;
+    }
+
+/* Анимация для страницы "Красный" */
+.red .nav-item:not(.current) a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+    .red .nav-item:not(.current) a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ff4136;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+.red .nav-item:not(.current):hover a {
+    color: #ff4136;
+}
+
+    .red .nav-item:not(.current):hover a::after {
+        transform: scaleX(1);
+    }
+
+/* Анимация для страницы "Синий" */
+.blue .nav-item:not(.current) {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+    .blue .nav-item:not(.current):hover {
+        transform: translateY(-5px);
+        background-color: #0074D9;
+    }
+
+        .blue .nav-item:not(.current):hover a {
+            color: white;
+        }
